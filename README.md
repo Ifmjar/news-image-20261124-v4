@@ -1,4 +1,7 @@
 # The World in One Day — Tuesday 24 November 2026 (v4)
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/Ifmjar/news-image-20261124-v4/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/Ifmjar/news-image-20261124-v4/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
 One image that sums up the world's news of Tuesday 24 November 2026:
 12 stories from 7 regions, set out as a single broadsheet-style poster
