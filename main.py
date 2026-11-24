@@ -33,6 +33,7 @@ def read_chunks(data):
     pos = 8
     seen_ihdr = False
     seen_iend = False
+    n_chunks = 0
     while pos < len(data):
         if pos + 8 > len(data):
             fail("truncated chunk header")
@@ -47,6 +48,10 @@ def read_chunks(data):
             fail(f"bad CRC in {ctype.decode('ascii', 'replace')} chunk")
         if ctype == b"IHDR":
             seen_ihdr = True
+            if len(payload) != 13:
+                fail(f"IHDR chunk is {len(payload)} bytes, expected 13")
+            if n_chunks != 0:
+                fail("IHDR is not the first chunk")
             width, height = struct.unpack(">II", payload[:8])
             if width > MAX_SIDE or height > MAX_SIDE:
                 fail(f"image is {width}x{height}, over the {MAX_SIDE}px limit")
@@ -55,6 +60,7 @@ def read_chunks(data):
             if end != len(data):
                 fail("trailing bytes after IEND")
         yield ctype, payload
+        n_chunks += 1
         pos = end
     if not seen_ihdr:
         fail("no IHDR chunk")
